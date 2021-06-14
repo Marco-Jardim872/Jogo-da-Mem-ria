@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(15, 15, 15);
+  text-align: center;
+ 
+}
+#container {
+  display: flex;
+  width: 1325px;
+  height: 495px;
+  border: 1px solid #111;
+  position: relative;
+  margin:  auto;
+  border-radius: 10px;
+  background-color: rgb(167, 142, 2);
+  justify-content: center;
+  align-items: center;
+  
+}
+#titulo, h1{
+  color:white;
+  margin-top: 10px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px white;
+}
+.card {
+  width: 160px;
+  height: 240px;
+  position: absolute;
+  border-radius: 10px;
+  perspective: 600px;
+}
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transition: all 1s;
+  backface-visibility: hidden;
+}
+.back {
+  background: url("/imagens/fback2.png");
+}
+.back.flipped {
+  transform: rotateY(180deg);
+}
+.front {
+  transform: rotateY(-180deg);
+}
+.front.flipped {
+  transform: rotateY(0deg);
+}
+.card:hover {
+  box-shadow: 0 0 10px rgb(216, 64, 64);
+}
+#face.flipped.match {
+  box-shadow: 0 0 10px #0f0;
+}
+#modalGameOver {
+  position: absolute;
+ top: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+#imgGameOver {
+  margin-top: 100px;
+}
+#imgMatchSign {
+  
+  position: relative;
+  top: 20px;
+  transition-property: top, opacity;
+  transition-duration: 1.5s;
+  opacity: 1;
+  z-index: -1;
+}
